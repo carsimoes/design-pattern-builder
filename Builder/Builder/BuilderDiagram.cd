@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Builder.Builder.AlainProstHamburguerBuilder">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAASBAEAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\AlainProstHamburguerBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Builder.Builder.AyrtonSennaHamburguerBuilder">
+    <Position X="0.5" Y="3.5" Width="2.75" />
+    <InheritanceLine Type="Builder.Builder.HamburguerBuilder" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.75" Y="3.812" />
+        <Point X="3.25" Y="3.812" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAASBAEAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\AyrtonSennaBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Builder.Builder.HamburguerBuilder">
+    <Position X="4.75" Y="0.5" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAASBAEAAAAgBAAAAAAQAAAAAA=</HashCode>
+      <FileName>Builder\HamburguerBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_hamburguer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Builder.Builder.NelsonPiquetHamburguerBuilder">
+    <Position X="7" Y="6.25" Width="2.5" />
+    <InheritanceLine Type="Builder.Builder.HamburguerBuilder" FixedToPoint="true">
+      <Path>
+        <Point X="8" Y="4.488" />
+        <Point X="8" Y="6.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAASBAEAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\NelsonPiquetHamburguerBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Builder.Builder.RubensBaricheloHamburguerBuilder">
+    <Position X="12" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAASBAEAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\RubensBaricheloHamburguerBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Builder.Builder.SchumarHamburguerBuilder">
+    <Position X="12.25" Y="3.75" Width="2.5" />
+    <InheritanceLine Type="Builder.Builder.HamburguerBuilder" FixedFromPoint="true">
+      <Path>
+        <Point X="11.25" Y="3.965" />
+        <Point X="12.25" Y="3.965" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAQAAAAAAAAAAAASBAEAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Builder\SchumarHamburguerBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Builder.Director.HamburguerDirector">
+    <Position X="1.25" Y="6.75" Width="3.5" />
+    <AssociationLine Name="_hamburguerBuilder" Type="Builder.Builder.HamburguerBuilder" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.875" Y="6.75" />
+        <Point X="3.875" Y="4.312" />
+        <Point X="4.75" Y="4.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.099" Y="-0.123" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAABAACAAAAAAAAAAAYAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Director\HamburguerDirector.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_hamburguerBuilder" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Builder.Models.Hamburguer">
+    <Position X="16" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAEgACAAAAAgAAQAAAAAAIAACAAAAA=</HashCode>
+      <FileName>Models\Hamburguer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Salad" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Builder.Models.Salad">
+    <Position X="16" Y="4.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAEAAAAEAAAAAAAAAAAACAAAAAAAIA=</HashCode>
+      <FileName>Models\Salad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
