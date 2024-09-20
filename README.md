@@ -1,39 +1,38 @@
-# Padrão de projeto — Builder
+# Design Pattern — Builder
 
-O que é padrão de projeto:
-Um padrão de projeto (ou design pattern) é uma solução geral reutilizável para um problema comum que ocorre no desenvolvimento de software. Esses padrões são descrições ou modelos abstratos que podem ser aplicados a diferentes cenários, fornecendo uma estrutura ou abordagem para resolver problemas recorrentes de design e arquitetura de sistemas com paradigma de programação orientada a objetos .
+What is a design pattern:
+A design pattern is a general, reusable solution to a common problem that occurs in software development. These patterns are abstract descriptions or models that can be applied to different scenarios, providing a framework or approach to solving recurring problems in system design and architecture with an object-oriented programming paradigm.
 
+## HamburgerBuilder (Abstract Class)
+This is an abstract class that defines a series of “common” methods that child classes must implement to build a hamburger with different ingredients.
 
-## HamburgerBuilder (Classe Abstrata)
-Esta é uma classe abstrata que define uma série de métodos “comuns” que as classes filhas devem implementar para construir um hambúrguer com diferentes ingredientes.
+## AlainProstHamburgerBuilder (Concrete Class)
+This class inherits from HamburgerBuilder and implements the methods defined in the abstract class to build a specific hamburger with defined characteristics.
 
-## AlainProstHamburgerBuilder (Classe Concreta)
-Esta classe herda de HamburgerBuilder e implementa os métodos definidos na classe abstrata para construir um hambúrguer específico com características definidas.
+## AyrtonSennaHamburgerBuilder (Concrete Class)
 
-## AyrtonSennaHamburgerBuilder (Classe Concreta)
+Similar to the previous class, it inherits from HamburgerBuilder and implements its own methods to build a hamburger in the Ayrton Senna style.
 
-Semelhante à classe anterior, herda de HamburgerBuilder e implementa seus próprios métodos para construir um hambúrguer no estilo Ayrton Senna.
+## NelsonPiquetHamburgerBuilder (Concrete Class)
+Another concrete class that inherits from HamburgerBuilder, customizing the construction of a hamburger according to the preferences attributed to Nelson Piquet.
 
-## NelsonPiquetHamburgerBuilder (Classe Concreta)
-Outra classe concreta que herda de HamburgerBuilder, personalizando a construção de um hambúrguer de acordo com as preferências atribuídas a Nelson Piquet.
+## RubensBarricheloHamburgerBuilder (Concrete Class)
+Similar to the others, but with specific construction characteristics for Rubens Barrichelo's hamburger style.
 
-## RubensBarricheloHamburgerBuilder (Classe Concreta)
-Semelhante aos demais, mas com as características específicas de construção para o estilo de hambúrguer do Rubens Barrichelo.
+## SchumarHamburgerBuilder (Concrete Class)
+Implements the construction of a hamburger in the “Schumar” style with specific ingredients and construction method.
 
-## SchumarHamburgerBuilder (Classe Concreta)
-Implementa a construção de um hambúrguer no estilo “Schumar” com os ingredientes e método de construção específicos.
+## Hamburger (Class)
+This is the class that represents the final object that will be built by the “builder” classes.
 
-## Hamburger (Classe)
-Esta é a classe que representa o objeto final que será construído pelas classes “builders”.
+## Salad (Class)
+Represents the salad ingredients that can be added to the burger.
 
-## Salad (Classe)
-Representa os ingredientes de salada que podem ser adicionados ao hambúrguer.
+## HamburgerDirector (Class)
+This class is responsible for managing the burger construction process using the different “builders”.
 
-## HamburgerDirector (Classe)
-Esta classe é responsável por gerenciar o processo de construção do hambúrguer usando os diferentes “builders”.
+The HamburgerDirector class coordinates the process of building different types of burgers, using different concrete HamburgerBuilder classes. Each specialized builder (such as AlainProstHamburgerBuilder or AyrtonSennaHamburgerBuilder) implements the process of building a burger with its own variations of ingredients. The end result is a customized Hamburger object.
 
-A classe HamburgerDirector coordena o processo de construção de diferentes tipos de hambúrgueres, utilizando diferentes classes concretas de HamburgerBuilder. Cada construtor especializado (como o AlainProstHamburgerBuilder ou AyrtonSennaHamburgerBuilder) implementa o processo de construção de um hambúrguer com suas próprias variações de ingredientes. O resultado final é um objeto Hamburger personalizado.
+## Conclusion
 
-## Conclusão
-
-O padrão Builder é especialmente útil em cenários onde a criação de um objeto envolve muitas variáveis ou etapas complexas. Ele proporciona uma maneira estruturada e modular de construir objetos, melhorando a clareza do código e a separação de responsabilidades. Ao encapsular o processo de construção, ele facilita a manutenção e a evolução do software, permitindo a criação de produtos de forma consistente e flexível, sem sacrificar a simplicidade.
+The Builder pattern is especially useful in scenarios where creating an object involves many variables or complex steps. It provides a structured and modular way of building objects, improving code clarity and separation of concerns. By encapsulating the construction process, it facilitates maintenance and evolution of the software, allowing the creation of products in a consistent and flexible way, without sacrificing simplicity.
